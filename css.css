@@ -1,0 +1,359 @@
+#calosc
+{
+		width: 1450px;
+		height: 1000px;
+		background-color: green;
+}
+#gora
+{
+		width: 1450px;
+		height: 200px;
+		background-color: #3399ff;
+}
+#menu
+{
+		width: 12%;
+		height: 700px;
+		background-color: blue;
+		float: left;
+}
+#gra
+{
+		width: 74%;
+		height: 700px;
+		background-color: #ccff66;
+		float: left;	
+	
+}
+#gra1
+{
+		width: 74%;
+		height: 700px;
+		background-color: #ccff66;
+		float: left;		
+	
+}
+#gra1madzy
+{
+	width: 100%;
+	height: 700px;
+	background-color: #ccff66;
+	float: left;
+}
+#gra1czarni
+{
+	width: 100%;
+	height: 700px;
+	background-color: #ccff66;
+	float: left;
+	display: none;
+}
+#pytanka
+{
+	position: absolute;
+	font-size: 15px;
+	background-color: #66ffff;
+	height: 500px;
+	width: 400px;
+	float: left;
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-top: 100px;
+	display: none;
+	transform: none;
+	transition: 1s ease-in-out; 
+}
+#drzewa
+{
+		width: 35%;
+		height: 700px;
+		background-color: 00ccaa;
+		float: left;
+		display: none;
+		
+}
+#mag
+{
+		width: 175px;
+		height: 30px;
+		background-color: #FFD966;
+		float: left;
+		margin-left: 100px;
+		margin-right: 150px;
+		font-size: 24px;
+		text-align: center;
+		font-family: calibri;
+	
+}
+#czarni1
+{
+		width: 175px;
+		height: 30px;
+		background-color: #FFD966;
+		float: left;
+		margin-left: 100px;
+		margin-right: 150px;
+		font-size: 15px;
+		text-align: center;
+		font-family: calibri;
+	
+}
+#tabla
+{
+	float: left;
+	border: 0px;
+	border-collapse: collapse;
+}
+#tabla td.inny_td
+{ 
+		height: 41px;
+		width: 40px;
+		text-align: center;
+		border: none;
+		line-height: 0px;
+		background-image: url("niebo.png");
+}
+#tabla td 
+{ 
+		height: 41px;
+		width: 40px;
+		text-align: center;
+		border: none;
+		line-height: 0px; 
+		background-image: url("niebo.png");
+}
+
+#pytania
+{
+		width: 64%;
+		height: 700px;
+		background-color: 00ccaa;
+		float: left;
+}
+
+#pyt
+{
+		width: 130px;
+		height: 30px;
+		background-color: #FFD966;
+		float: left;
+		margin-left: 100px;
+		margin-right: 150px;
+		font-size: 15px;
+		text-align: center;
+		font-family: calibri;
+}
+
+#tabelka
+{
+		float: left;
+		border: 0px;
+		border-collapse: collapse;
+	
+}
+#tabelka td
+{
+		height: 42px;
+		width: 30px;
+		text-align: center;
+		border-width: 1px;  
+		margin-top: 0px;
+		border-bottom: 0px;
+		border-right: 0px;
+		margin-bottom: 0px;
+		border-style: solid;
+		float: left;
+		background-color: #F2F2F2;
+}
+#tabelka td.inny_wyglad1
+{
+		height: 40px;
+		width: 30px;
+		text-align: center;
+		background-color: 00ccaa;
+		border: none;
+}
+#tabelka td.inny_wyglad2
+{
+		height: 40px;
+		width: 30px;
+		text-align: center;
+		background-color: 00ccaa;
+		border: none;
+}
+#tabelka2
+{
+		float:left;
+		border:0px;
+		border-collapse: collapse;
+}
+
+#tabelka2 th
+{
+		height: 39px;
+		width: 120px;
+		text-align: center;
+		border-width: 1px;  
+		border-bottom: 1px;
+		border-style: solid;
+		float: left;
+		background-color: #e0adf5;
+}
+#tabelka2 td
+{
+		height: 87px;
+		width: 120px;
+		text-align: center;
+		border-width: 1px; 
+		border-top: 0px;
+		border-style: solid;
+		float: left;	
+		background-color: #F2F2F2;
+}
+#tabelka3
+{
+		float: left;
+		border: 0px;
+		border-collapse: collapse;
+}
+
+#tabelka3 th
+{
+		height: 38px;
+		width: 159px;
+		text-align: center;
+		border-width: 1px;  
+		border-style: solid;
+		float: left;
+		background-color: #e0adf5;
+		border-left: 0px;
+}
+#tabelka3 td
+{
+		height: 42px;
+		width: 120px;
+		text-align: center;
+		border-width: 1px;  
+		border-style: solid;
+		border-bottom: 1px;
+		float: left;	
+		background-color: #F2F2F2;
+		border-left: 0px;
+}
+#tabelka3 td.inny_wyglad 
+{
+		height: 41px;
+		width: 36px;
+		text-align: center;
+		border-width: 1px;  
+		border-style: solid;
+		border-left: 0px;
+		float: left;	
+		background-color: #F7D1E1;
+}
+
+#blok
+{
+	width: 256px;
+	height: 150px;
+	background-color: 005543;
+	margin-top: 50px;
+	margin-left: 165px;
+	margin-right: 50px;
+	font-size: 24px;
+	text-align: center;
+	font-family: calibri;
+}
+#wynik0
+{
+	width: 252px;
+	height: 50px;
+	background-color: #CCCC00;
+	float: left;
+	font-size: 20px;
+	text-align: center;
+	font-family: calibri;
+	border-style: solid;
+	border-width: 2px;
+}
+
+#madzy
+{
+	width: 124px;
+	height: 50px;
+	background-color: #00ccff;
+	float: left;
+	font-size: 15px;
+	text-align: center;
+	font-family: calibri;
+	border-style: solid;
+	border-width: 2px;
+}
+#czarni
+{
+	width: 124px;
+	height: 50px;
+	background-color: #3300ff;
+	float: left;
+	font-size: 15px;
+	text-align: center;
+	font-family: calibri;
+	border-style: solid;
+	border-width: 2px;
+}
+#wynik1
+{
+	width: 124px;
+	height: 40px;
+	background-color: #FF5050;
+	float: left;
+	font-size: 20px;
+	text-align: center;
+	font-family: calibri;
+	border-style: solid;
+	border-width: 2px;
+}
+#wynik2
+{
+	width: 124px;
+	height: 40px;
+	background-color: #FF5050;
+	float: left;
+	font-size: 20px;
+	text-align: center;
+	font-family: calibri;
+	border-style: solid;
+	border-width: 2px;
+}
+
+#prawy
+{
+		width: 14%;
+		height: 700px;
+		background-color: #63ff94;
+		float: left;
+	
+}
+#prawy1
+{
+		width: 14%;
+		height: 700px;
+		background-color: #63ff94;
+		float: left;
+	
+}
+#dol
+{
+		width: 1450px;
+		height: 100px;
+		background-color: #3399ff;
+		float:left;
+	
+}
+#spotka
+{
+		width: 1450px;
+		height: 50px;
+		background-color: #3399ff;
+	
+}
