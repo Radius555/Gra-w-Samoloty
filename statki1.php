@@ -19,7 +19,7 @@
 <div id="pytania">
 <div id="pytanka">
 <?
-	$c = mysqli_connect('localhost', 'root', ' ','pytanka1');
+/*	$c = mysqli_connect('localhost', 'root', ' ','pytanka1');
 	
 	$z = mysqli_query($c,"SELECT * FROM Dywizja303");
 	while($r = mysqli_fetch_array($z)) 
@@ -27,15 +27,18 @@
 		echo $r['Pytanie'].' '.$r['OdpA'].' '.$r['OdpB'].' '.$r['OdpC'].' '.$r['OdpD'].'<br>';
 		}	
 	mysqli_close($c);
+*/
 ?>
 <form method="post" action="statki1.php">
 <p>Treść pytania:</p><br>
-<? echo $row['pytanie']; ?>
+<p>Który z samolotów należał do Dywizji 303</p><br>
+<?// echo $row['pytanie']; ?>
+<script src="skrypt.js"></script>
 <p name="pytanie">
-<input type="button" value="OdpA" name="OdpA"/><? echo $row['OdpA'] ?><br><br>
-<input type="button" value="OdpB" name="OdpB"/><br><br>
-<input type="button" value="OdpC" name="OdpC"/><br><br>
-<input type="button" value="OdpD" name="OdpD"/><br><br>
+<input id="OdpA" type="button" value="OdpA" onclick="sprawdz(OdpA);" /> Hawker Hurricane?<br><br>
+<input id="OdpB" type="button" value="OdpB" onclick="sprawdz(OdpB);" /> MESSERSCHMITT BF 109?<br><br>
+<input id="OdpC" type="button" value="OdpC" onclick="sprawdz(OdpC);" /> MESSERSCHMITT ME 262 SCHWALBE?<br><br>
+<input id="OdpD" type="button" value="OdpD" onclick="sprawdz(OdpD);" /> RED BARON?<br><br>
 </form>
 </div>
 <br>
@@ -165,13 +168,13 @@
 <table id="tabelka3">
 <tr><th>PUNKTACJA <br>INDYWIDUALNA</th></tr>
 <tr><td><b>IMIĘ 1</b></td>
-<td class="inny_wyglad">PTS</td></tr>
+<td class="inny_wyglad" id ="pts1"></td></tr>
 <tr><td><b>IMIĘ 2</b></td>
-<td class="inny_wyglad">PTS</td></tr>
+<td class="inny_wyglad"></td></tr>
 <tr><td><b>IMIĘ 3</b></td>
-<td class="inny_wyglad">PTS</td></tr>
+<td class="inny_wyglad"></td></tr>
 <tr><td><b>IMIĘ 4</b></td>
-<td class="inny_wyglad">PTS</td></tr>
+<td class="inny_wyglad"></td></tr>
 </table>
 <div id="blok">
 <div id="wynik0"><b>Wynik Meczu </b></div>
