@@ -168,7 +168,7 @@
 <table id="tabelka3">
 <tr><th>PUNKTACJA <br>INDYWIDUALNA</th></tr>
 <tr><td><b>IMIĘ 1</b></td>
-<td class="inny_wyglad" id ="pts1"></td></tr>
+<td class="inny_wyglad" id ="wynik"></td></tr>
 <tr><td><b>IMIĘ 2</b></td>
 <td class="inny_wyglad"></td></tr>
 <tr><td><b>IMIĘ 3</b></td>

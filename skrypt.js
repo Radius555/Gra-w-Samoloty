@@ -1,6 +1,6 @@
-var punkty = 0;
-document.getElementById("pts1").innerHTML = punkty;
-
+	var punkty = 0;
+	
+	
 function losuj() 
 {
 	var items = [];
@@ -117,6 +117,7 @@ function losuj()
 			setTimeout(blokuj_pyt(),1000);
 			odblokuj_pytanka();
 			pytanka();
+			zlicz_pts();
 		}
 		else
 		{
@@ -133,9 +134,10 @@ function sprawdz(pozycja)
 	if(pozycja == poprawna) 
 	{
     alert('Dobra odpowiedź otrzymujesz punkt!');
-	punkty =+ 1;
 	znik_pytanka();
 	odblokuj_drz();
+	punkty = punkty + 1;
+	document.getElementById("wynik").innerHTML=punkty;
 	}
 
     else
@@ -157,30 +159,25 @@ function zmien(pozycja)
 		gnome++;
 		if(gnome<=20)
 		{
-		punkty =+1;
-		setTimeout(function(){document.getElementById(pozycja).src = 'anglik.png'}, 900);
-		setTimeout(function(){document.getElementById(pozycja).src = 'samolotz.png'}, 1800);
-		setTimeout(function(){document.getElementById(pozycja).src = 'la.png'}, 2700);
+		setTimeout(function(){document.getElementById(pozycja).src = 'anglik.png'}, 1000);
+		setTimeout(function(){document.getElementById(pozycja).src = 'samolotz.png'}, 2000);
+		setTimeout(function(){document.getElementById(pozycja).src = 'la.png'}, 3000);
 		document.getElementById(pozycja).disabled='disabled';
-		
-		setTimeout(znik_drz(),3300);
-		setTimeout(odblokuj_pyt(),3300);
+		punkty = punkty + 1;
+		document.getElementById("wynik").innerHTML=punkty;
+		setTimeout(znik_drz, 5000);
 		}
 		else
 		{
-		document.getElementById(pozycja).src = 'niebo.png';
+		setTimeout(function(){document.getElementById(pozycja).src = 'niebo.png'}, 1000);
 		document.getElementById(pozycja).disabled='disabled';
-		
-		setTimeout(znik_drz(),3000);
-		setTimeout(odblokuj_pyt(),3000);				
+		setTimeout(znik_drz, 5000);
 		}
 	}
 	else 
 	{
-	document.getElementById(pozycja).src = 'niebo.png';
+	setTimeout(function(){document.getElementById(pozycja).src = 'niebo.png'}, 1000);
 	document.getElementById(pozycja).disabled='disabled';
-	setTimeout(znik_drz(),1000);
-	setTimeout(odblokuj_pyt(),1000);
+	setTimeout(znik_drz, 5000);
 	}
 };
-
