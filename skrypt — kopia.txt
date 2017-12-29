@@ -29,7 +29,7 @@ function losuj()
 		
 		function znik_pyt() 
 		{
-		document.getElementById( 'pytania' ).style.display='none';
+		document.getElementById( 'tabelka' ).style.display='none';
 		};
 		
 		function znik_drz() 
@@ -44,23 +44,13 @@ function losuj()
 		
 		function blokuj_pyt()
 		{
-		document.getElementById('pytania').disabled='disabled';	
+		document.getElementById('tabelka').disabled='disabled';	
 		};
 		
 		function znik_pytanka() 
 		{
 		document.getElementById( 'pytanka').style.display='none';
 		};
-		function znik_animacja()
-		{
-		document.getElementById('kwadracik').style.display="none";
-		document.getElementById('samolot1').style.display="none";
-		document.getElementById('samolot2').style.display="none";
-		document.getElementById('pocisk').style.display="none";
-		document.getElementById('boom').style.display="none";
-		document.getElementById('bangbang').style.display="none";
-		document.getElementById('kula').style.display="none";
-		}
 	
 	function pytanka()
 	{
@@ -167,34 +157,29 @@ function zmien(pozycja)
 		gnome++;
 		if(gnome<=20)
 		{
+		setTimeout(function(){document.getElementById(pozycja).src = 'anglik.png'}, 1000);
+		setTimeout(function(){document.getElementById(pozycja).src = 'samolotz.png'}, 2000);
+		setTimeout(function(){document.getElementById(pozycja).src = 'la.png'}, 3000);
 		document.getElementById(pozycja).disabled='disabled';
 		punkty = punkty + 1;
 		document.getElementById("wynik1").innerHTML=punkty;
-		znik_pyt();
-		znik_drz();
-		document.getElementById('kwadracik').style.display="block";
-		document.getElementById('samolot1').setAttribute("style", "animation-play-state:running; display: block;");
-		document.getElementById('samolot2').setAttribute("style", "animation-play-state:running; display: block;");
-		document.getElementById('pocisk').setAttribute("style", "animation-play-state:running; display: block;");
-		document.getElementById('boom').setAttribute("style", "animation-play-state:running; display: block;");
-		document.getElementById('bangbang').setAttribute("style", "animation-play-state:running; display: block;");
-		document.getElementById('kula').setAttribute("style", "animation-play-state:running; display: block;");
-		setTimeout(znik_animacja, 4500); 
-		setTimeout(odblokuj_pyt, 4500); 
+		setTimeout(znik_drz(), 5000);
+		setTimeout(odblokuj_pyt(), 5000);
 		}
 		else
 		{
-		setTimeout(function(){document.getElementById(pozycja).src = 'niebo.png'}, 500);
+		setTimeout(function(){document.getElementById(pozycja).src = 'niebo.png'}, 1000);
 		document.getElementById(pozycja).disabled='disabled';
-		setTimeout(znik_drz, 1500);
-		setTimeout(odblokuj_pyt, 1500);
+		odblokuj_pyt();
+		setTimeout(znik_drz(), 5000);
+		setTimeout(odblokuj_pyt(), 5000);
 		}
 	}
 	else 
 	{
-	setTimeout(function(){document.getElementById(pozycja).src = 'niebo.png'}, 500);
+	setTimeout(function(){document.getElementById(pozycja).src = 'niebo.png'}, 1000);
 	document.getElementById(pozycja).disabled='disabled';
-	setTimeout(znik_drz, 2000);
-	setTimeout(odblokuj_pyt, 2000);
+	setTimeout(znik_drz(), 5000);
+	setTimeout(odblokuj_pyt(), 5000);
 	}
 };

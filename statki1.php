@@ -18,27 +18,22 @@
 <div id="gra1madzy">
 <div id="pytania">
 <div id="pytanka">
-<?
-/*	$c = mysqli_connect('localhost', 'root', ' ','pytanka1');
+<!--<?php
+	/*$pol = mysqli_connect('localhost', 'root', '','pytanka1');
+	$dane = mysqli_query($pol,"SELECT * FROM dywizja 303 WHERE id=1"); 
 	
-	$z = mysqli_query($c,"SELECT * FROM Dywizja303");
-	while($r = mysqli_fetch_array($z)) 
-        {
-		echo $r['Pytanie'].' '.$r['OdpA'].' '.$r['OdpB'].' '.$r['OdpC'].' '.$r['OdpD'].'<br>';
-		}	
-	mysqli_close($c);
-*/
-?>
-<form method="post" action="statki1.php">
-<p>Treść pytania:</p><br>
-<p>Który z samolotów należał do Dywizji 303</p><br>
-<?// echo $row['pytanie']; ?>
-<script src="skrypt.js"></script>
-<p name="pytanie">
-<input id="OdpA" type="button" value="OdpA" onclick="sprawdz(OdpA);" /> Hawker Hurricane?<br><br>
-<input id="OdpB" type="button" value="OdpB" onclick="sprawdz(OdpB);" /> MESSERSCHMITT BF 109?<br><br>
-<input id="OdpC" type="button" value="OdpC" onclick="sprawdz(OdpC);" /> MESSERSCHMITT ME 262 SCHWALBE?<br><br>
-<input id="OdpD" type="button" value="OdpD" onclick="sprawdz(OdpD);" /> RED BARON?<br><br>
+	while ($ele = $mysqli_fetch_array($dane))
+	{
+	echo $pytanie = $ele['Pytanie']." ".$OdpA = $ele['OdpA']." ".$OdpB = $ele['OdpB']." ".$OdpC = $ele['OdpC']." ".$OdpD = $ele['OdpD']." ".$OdpP = $ele['Poprawna'];
+	}
+	mysqli_close($polacz);*/
+?>-->
+<form method="POST" action="statki1.php">
+<input type="button" name="Pytanie"/><br>
+<input type="button" name="OdpA"  onclick="function sprawdz(odpA)"/><br>
+<input type="button" name="OdpB" onclick="function sprawdz(odpB)"/><br>
+<input type="button" name="OdpC" onclick="function sprawdz(odpC)" /><br>
+<input type="button" name="OdpD" onclick="function sprawdz(odpD)"/><br>
 </form>
 </div>
 <br>
@@ -168,13 +163,13 @@
 <table id="tabelka3">
 <tr><th>PUNKTACJA <br>INDYWIDUALNA</th></tr>
 <tr><td><b>IMIĘ 1</b></td>
-<td class="inny_wyglad" id ="wynik"></td></tr>
+<td class="inny_wyglad">PTS</td></tr>
 <tr><td><b>IMIĘ 2</b></td>
-<td class="inny_wyglad"></td></tr>
+<td class="inny_wyglad">PTS</td></tr>
 <tr><td><b>IMIĘ 3</b></td>
-<td class="inny_wyglad"></td></tr>
+<td class="inny_wyglad">PTS</td></tr>
 <tr><td><b>IMIĘ 4</b></td>
-<td class="inny_wyglad"></td></tr>
+<td class="inny_wyglad">PTS</td></tr>
 </table>
 <div id="blok">
 <div id="wynik0"><b>Wynik Meczu </b></div>

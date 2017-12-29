@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css3.css" type="text/css">
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<div id="calosc">
+<div id="gora">
+<h1> Hello </h1>
+</div>
+<div id="menu">Lewo</div>
+<div id="gra1">
+<div id="gra1madzy">
+<div id="chmurka">
+<div id="samolot1"></div>
+<div id="samolot2"><div id="kula"></div></div>
+<div id="pocisk"></div>
+<div id="boom"></div>
+<div id="bangbang"></div>
+</div>
+<script>
+document.querySelector('#chmurka').addEventListener('click', function() {
+    $( "#chmurka" ).animate({
+    width: "1200px",
+	height: "685px",
+  }, 1000 );
+  document.getElementById('samolot1').setAttribute("style", "animation-play-state:running; display: block; animation-delay:0.3s;");
+  document.getElementById('samolot2').setAttribute("style", "animation-play-state:running; display: block; animation-delay:0.3s;");
+  document.getElementById('pocisk').setAttribute("style", "animation-play-state:running; display: block; animation-delay:0.3s;");
+  document.getElementById('boom').setAttribute("style", "animation-play-state:running; display: block; animation-delay:0.3s;");
+  document.getElementById('bangbang').setAttribute("style", "animation-play-state:running; display: block; animation-delay:0.3s;");
+  document.getElementById('kula').setAttribute("style", "animation-play-state:running; display: block; animation-delay:0.3s;");
+  document.getElementById('licznik').setAttribute("style", "animation-play-state:running; display: block; animation-delay:0.3s;");
+  document.getElementById('info').setAttribute("style", "animation-play-state:running; display: block; animation-delay:0.3s;");
+});
+</script>
+</div>
+</div>
+<div id="prawy1">
+nic
+</div>
+<div id="dol">
+<p>Dół</p>
+</div>
+<div id="stopka">
+<p>DDDDDD</p>
+</div>
+</div>
+</body>
+</html>

@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css.css" type="text/css">
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script src="skrypt.js"></script>
 </head>
 <body>
 <div id="calosc">
@@ -16,28 +18,23 @@
 </div>
 <div id="gra1">
 <div id="gra1madzy">
+
+<div id="kwadracik">
+<div id="samolot1"></div>
+<div id="samolot2"><div id="kula"></div></div>
+<div id="pocisk"></div>
+<div id="boom"></div>
+<div id="bangbang"></div>
+</div>
+
 <div id="pytania">
 <div id="pytanka">
-<?php
-	$polacz = mysql_connect('localhost', 'root', '','pytanka1');
-	mysql_select_db('pytanka1',"$polacz");
-	$sql = ($polacz,"SELECT * FROM `dywizja 303` WHERE `Pytanie` = '$pytanie' AND `OdpA` = `$OdpA` AND `OdpB` = '$OdpB' AND `OdpC` = '$OdpC'
-	AND `OdpD` = '$OdpD' AND `Poprawna` = '$OdpP'"); 
-	$dane = mysql_query($sql); 
-	
-	$pytanie = ($_POST['Pytanie']);
-	$OdpA = ($_POST['OdpA']);
-	$OdpB = ($_POST['OdpB']);
-	$OdpC = ($_POST['OdpC']);
-	$OdpD = ($_POST['OdpD']);
-	$OdpP = ($_POST['Poprawna']);
-?>
-<form method="POST" action="statki.html">
-<input type="button" name="Pytanie" /><?php echo $Pytanie; ?><br>
-<input type="button" name="OdpA"  /><?php echo $OdpA; ?><br>
-<input type="button" name="OdpB" /><?php echo $OdpB; ?><br>
-<input type="button" name="OdpC" /><?php echo $OdpC; ?><br>
-<input type="button" name="OdpD" /><?php echo $OdpD; ?><br>
+<form>
+<p> Pytanie </p><br>
+<input type="button" name="odpA" value="odpA" id="OdpA" onclick="sprawdz(OdpA)"/><br>
+<input type="button" name="odpB" value="odpB" id="OdpB" onclick="sprawdz(OdpB)"/><br>
+<input type="button" name="odpC" value="odpC" id="OdpC" onclick="sprawdz(OdpC)"/><br>
+<input type="button" name="odpD" value="odpD" id="OdpD" onclick="sprawdz(OdpD)"/><br>
 </form>
 </div>
 <br>
@@ -46,7 +43,6 @@
 </div>
 <br><br>
 <table id="tabelka" align="left">
-<script src="skrypt.js"></script>
 <tr>
  <td class="inny_wyglad1"></td>
  <td class="inny_wyglad1">A</td>
@@ -189,7 +185,6 @@
 <b>Drużyna Magów</b>
 </div> ----> 
 <table id="tabla" align="left">
-<script src="skrypt.js"></script>
 <tr>
  <td class="inny_td"></td>
  <td class="inny_td">A</td>
@@ -290,7 +285,6 @@
  <td onClick="zmien(64)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="64"></td>
 </tr>
 </table>
-</div>
 </div>
 </div>
 </div>

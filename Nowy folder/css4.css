@@ -1,0 +1,61 @@
+#calosc
+{
+		width: 1450px;
+		height: 1000px;
+		background-color: green;
+}
+#gora
+{
+		width: 1450px;
+		height: 200px;
+		background-color: #3399ff;
+}
+#menu
+{
+		width: 12%;
+		height: 700px;
+		background-color: blue;
+		float: left;
+}
+#gra1
+{
+		width: 74%;
+		height: 700px;
+		background-color: #ccff66;
+		float: left;		
+	
+}
+#gra1madzy
+{
+	width: 100%;
+	height: 685px;
+	background-color: #9140EA;
+	float: left;
+}
+#prawy1
+{
+		width: 14%;
+		height: 700px;
+		background-color: #63ff94;
+		float: left;
+		z-index: 2;
+		position: relative;
+}
+#dol
+{
+		width: 1450px;
+		height: 100px;
+		background-color: #3399ff;
+		float:left;
+		z-index: 3;
+		position: relative;
+	
+}
+#spotka
+{
+		width: 1450px;
+		height: 50px;
+		background-color: #3399ff;
+		z-index: 3;
+		position: relative;
+}
