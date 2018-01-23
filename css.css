@@ -53,18 +53,18 @@
 }
 @keyframes lot_samolot1
 {
-  0% { transform:translateX(-100px) scale(1); }
-  100% { transform:translateX(1090px) scale(1); }
+  0% { transform:translateX(-100px) translateY(0px) scale(1); }
+  100% { transform:translateX(1090px) translateY(0px) scale(1); }
 }
 @keyframes lot_samolot2
 {
-  0% { transform:translateX(20px) translateY(-70px) scale(1); }
-  45% { transform:translateX(580px) translateY(-60px) scale(1); }
-  48% { transform:translateX(585px) translateY(-40px) scale(1) rotate(10deg); }
-  50% { transform:translateX(590px) translateY(-20px) scale(1) rotate(20deg); }
-  52% { transform:translateX(595px) translateY(0px) scale(1) rotate(30deg); }
-  54% { transform:translateX(600px) translateY(20px) scale(1) rotate(40deg); }
-  56% { transform:translateX(605px) translateY(40px) scale(1) rotate(50deg); }
+  0% { transform:translateX(20px) translateY(0px) scale(1); }
+  45% { transform:translateX(580px) translateY(10px) scale(1); }
+  48% { transform:translateX(585px) translateY(10px) scale(1) rotate(10deg); }
+  50% { transform:translateX(590px) translateY(50px) scale(1) rotate(20deg); }
+  52% { transform:translateX(595px) translateY(70px) scale(1) rotate(30deg); }
+  54% { transform:translateX(600px) translateY(90px) scale(1) rotate(40deg); }
+  56% { transform:translateX(605px) translateY(110px) scale(1) rotate(50deg); }
   100% { transform:translateX(950px) translateY(650px) scale(1) rotate(90deg); }
 }
 @keyframes lot_kula
@@ -80,8 +80,8 @@
 }
 @keyframes lot_bombka
 {
-  0%  { transform:translateX(-50px) translateY(-100px) scale(1); }
-  50%  { transform:translateX(605px) translateY(-100px) scale(1); }
+  0%  { transform:translateX(-50px) translateY(-30px) scale(1); }
+  50%  { transform:translateX(605px) translateY(-30px) scale(1); }
   51%  { transform:scale(0); }
   100% { transform:scale(0); }
 }
@@ -117,6 +117,75 @@
   97% { transform: scale(0); }
   100% { transform: scale(0); }
 }
+@keyframes pytanka_anim
+{
+  0% { transform:translateX(50px) translateY(0px) scale(1); }
+  100% { transform:translateX(950px) translateY(0px) scale(1); }
+}
+@keyframes anim_pytka
+{
+  0% { transform:translateX(100px) translateY(-130px) scale(1); }
+  100% { transform:translateX(100px) translateY(30px) scale(1); }
+}
+@keyframes pytanka_znik_anim
+{
+  0% { transform: scale(1); }
+  100% { transform: scale(0); }	
+}
+@keyframes anim_OdpA
+{
+  0% { transform:translateX(-300px) translateY(0px) scale(1); }
+  100% { transform:translateX(0px) translateY(0px) scale(1); }
+}
+@keyframes OdpA_znik_anim
+{
+  0% { transform: scale(1); }
+  100% { transform: scale(0); }	
+}
+@keyframes anim_OdpB
+{
+  0% { transform:translateX(-300px) translateY(0px) scale(1); }
+  100% { transform:translateX(0px) translateY(0px) scale(1); }
+}
+@keyframes OdpB_znik_anim
+{
+  0% { transform: scale(1); }
+  100% { transform: scale(0); }	
+}
+@keyframes anim_OdpC
+{
+  0% { transform:translateX(-300px) translateY(0px) scale(1); }
+  100% { transform:translateX(0px) translateY(0px) scale(1); }
+}
+@keyframes OdpC_znik_anim
+{
+  0% { transform: scale(1); }
+  100% { transform: scale(0); }	
+}
+@keyframes anim_komunikat1
+{
+  0% { transform:translateX(-300px) translateY(0px) scale(1); }
+  50% { transform:translateX(0px) translateY(0px) scale(1); }
+  57% { transform: scale(1.5); }
+  64% { transform: scale(1); }
+  71% { transform: scale(1.5); }
+  78% { transform: scale(1); }
+  85% { transform: scale(1.5); }
+  92% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+@keyframes anim_komunikat2
+{
+  0% { transform:translateX(-300px) translateY(0px) scale(1); }
+  40% { transform:translateX(0px) translateY(0px) scale(1); }
+  57% { transform: scale(1.5); }
+  64% { transform: scale(1); }
+  71% { transform: scale(1.5); }
+  78% { transform: scale(1); }
+  85% { transform: scale(1.5); }
+  92% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
 #samolot1
 {
 	width:105px;
@@ -134,7 +203,7 @@
 {
 	width:105px;
 	height:75px;
-	 background-image:url('niemiec.png');
+	background-image:url('niemiec.png');
 	animation-delay: 0s;
 	animation: lot_samolot2 4.5s;
 	z-index: 1;
@@ -165,7 +234,7 @@
 	z-index: 3;
 	position: relative;
 	margin-left: 530px;
-	margin-top: -160px;
+	margin-top: -60px;
 	animation-play-state: paused;
 	display: none;
 }
@@ -175,11 +244,11 @@
 	height:100px;
 	background-image:url('Bangbang.png');
 	animation-delay: 3s;
-	animation: bangbang 4.5s;
+	animation: bangbang 4.7s;
 	z-index: 3;
 	position: relative;
 	margin-left: 830px;
-	margin-top: 400px;	
+	margin-top: 370px;	
 	animation-play-state:paused;
 	display: none;
 }
@@ -214,27 +283,117 @@
 }
 #pytanka
 {
-	position: absolute;
 	font-size: 15px;
 	background-color: #66ffff;
-	height: 500px;
-	width: 400px;
+	height: 600px;
+	width: 850px;
 	float: left;
-	margin-left: 40px;
-	margin-right: 40px;
-	margin-top: 100px;
+	margin-left: 100px;
+	margin-top: -20px;
 	display: none;
-	transform: none;
-	transition: 1s ease-in-out; 
+	animation-delay: 0s;
+	z-index: 3;
+	position: relative;
+	animation-play-state: paused;
+	animation: pytanka_anim 0.3s;
+	animation-direction:reverse;
+}
+#pytka
+{
+	position: relative;
+	font-size: 15px;
+	background-color: white;
+	height: 170px;
+	width: 60%;
+	float: left;
+	z-index: 4;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	animation: anim_pytka 1.5s;
+	display: none;
+	margin-top: 60px;
+	margin-left: 90px;
+}
+#OdpA
+{
+	position: relative;
+	font-size: 15px;
+	background-color: #66ff33;
+	height: 70px;
+	width: 60%;
+	float: left;
+	z-index: 4;
+	animation: anim_OdpA 0.5s;
+	display: none;
+	margin-top: 30px;
+	margin-left: 190px;
+}
+#OdpB
+{
+	position: relative;
+	font-size: 15px;
+	background-color: #66ff33;
+	height: 70px;
+	width: 60%;
+	float: left;
+	z-index: 4;
+	animation: anim_OdpB 0.5s;
+	display: none;
+	margin-top: 15px;
+	margin-left: 190px;
+}
+#OdpC
+{
+	position: relative;
+	font-size: 15px;
+	background-color: #66ff33;
+	height: 70px;
+	width: 60%;
+	float: left;
+	z-index: 4;
+	animation: anim_OdpC 0.5s;
+	display: none;
+	margin-top: 15px;
+	margin-left: 190px;
+}
+#komunikat1
+{
+	position: relative;
+	font-size: 15px;
+	background-color: #ffff33;
+	height: 70px;
+	width: 60%;
+	float: left;
+	z-index: 4;
+	animation: anim_komunikat1 2.8s;
+	display: none;
+	margin-top: 20px;
+	margin-left: 190px;
+}
+#komunikat2
+{
+	position: relative;
+	font-size: 15px;
+	background-color: #ffff33;
+	height: 70px;
+	width: 60%;
+	float: left;
+	z-index: 4;
+	animation: anim_komunikat2 2.8s;
+	display: none;
+	margin-top: 20px;
+	margin-left: 190px;
 }
 #drzewa
 {
-		width: 35%;
+		width: 50%;
 		height: 700px;
 		background-color: 00ccaa;
-		float: right;
+		float: left;
 		display: none;
-		
+		margin-left: 250px; 
 }
 #mag
 {
@@ -270,8 +429,8 @@
 }
 #tabla td.inny_td
 { 
-		height: 41px;
-		width: 40px;
+		height: 61px;
+		width: 80px;
 		text-align: center;
 		border: none;
 		line-height: 0px;
@@ -279,20 +438,25 @@
 }
 #tabla td 
 { 
-		height: 41px;
-		width: 40px;
+		height: 61px;
+		width: 80px;
 		text-align: center;
 		border: none;
 		line-height: 0px; 
 		background-image: url("niebo.png");
 }
-
+@keyframes pytania_anim
+{
+  0% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
 #pytania
 {
 		width: 64%;
 		height: 700px;
 		background-color: 00ccaa;
 		float: left;
+		margin-left: 20%;
 }
 
 #pyt

@@ -1,0 +1,114 @@
+#calosc
+{
+		width: 1450px;
+		height: 1000px;
+		background-color: green;
+}
+#gora
+{
+		width: 1450px;
+		height: 200px;
+		background-color: #3399ff;
+}
+#menu
+{
+		width: 12%;
+		height: 700px;
+		background-color: blue;
+		float: left;
+		z-index: 2;
+		position: relative;
+}
+@keyframes ruch
+{
+  0% { background-position:0 0, 0 0, 0 0; }
+  100% { background-position:10000px 0, 7500px 0, 5000px 0; }
+}
+#gra1
+{
+		width: 74%;
+		height: 700px;
+		background-color: #ccff66;
+		float: left;	
+		background-image: url('tlo.jpg'), url('tlo1.jpg'), url('tlo2.jpg');
+		animation:ruch 300s;
+}
+#powrot
+{
+	margin-left: 200px;
+	margin-top: 150px;
+	width: 200px;
+	height: 50px;	
+}
+#menus
+{
+	width: 400px;
+	height: 600px;
+	background-color: #0045A1;
+	float: left;
+	margin-left: 300px;
+	margin-top: 50px;
+}
+#menus1
+{
+	width: 600px;
+	height: 600px;
+	background-color: #0045A1;
+	float: left;
+	margin-left: 200px;
+	margin-top: 50px;
+}
+#nowagra
+{
+	width: 350px;
+	height: 100px;
+	background-color: #A8A8A8;
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+#tworca
+{
+	width: 350px;
+	height: 100px;
+	background-color: #A8A8A8;
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+#info
+{
+	width: 350px;
+	height: 100px;
+	background-color: #A8A8A8;
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+#prawy1
+{
+		width: 14%;
+		height: 700px;
+		background-color: #63ff94;
+		float: left;
+		z-index: 2;
+		position: relative;
+}
+#dol
+{
+		width: 1450px;
+		height: 100px;
+		background-color: #3399ff;
+		float:right;
+		z-index: 2;
+		position: relative;
+}
+#spotka
+{
+		width: 1450px;
+		height: 50px;
+		background-color: #3399ff;
+		z-index: 2;
+		position: relative;
+}

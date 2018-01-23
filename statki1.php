@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css.css" type="text/css">
+<script src="jquery-3.2.1.min.js"></script>
+<script src="skrypt.js"></script>
 </head>
 <body>
 <div id="calosc">
@@ -16,33 +18,22 @@
 </div>
 <div id="gra1">
 <div id="gra1madzy">
-<div id="pytania">
-<div id="pytanka">
-<!--<?php
-	/*$pol = mysqli_connect('localhost', 'root', '','pytanka1');
-	$dane = mysqli_query($pol,"SELECT * FROM dywizja 303 WHERE id=1"); 
-	
-	while ($ele = $mysqli_fetch_array($dane))
-	{
-	echo $pytanie = $ele['Pytanie']." ".$OdpA = $ele['OdpA']." ".$OdpB = $ele['OdpB']." ".$OdpC = $ele['OdpC']." ".$OdpD = $ele['OdpD']." ".$OdpP = $ele['Poprawna'];
-	}
-	mysqli_close($polacz);*/
-?>-->
-<form method="POST" action="statki1.php">
-<input type="button" name="Pytanie"/><br>
-<input type="button" name="OdpA"  onclick="function sprawdz(odpA)"/><br>
-<input type="button" name="OdpB" onclick="function sprawdz(odpB)"/><br>
-<input type="button" name="OdpC" onclick="function sprawdz(odpC)" /><br>
-<input type="button" name="OdpD" onclick="function sprawdz(odpD)"/><br>
-</form>
+
+<div id="kwadracik">
+<div id="samolot1"></div>
+<div id="samolot2"><div id="kula"></div></div>
+<div id="pocisk"></div>
+<div id="boom"></div>
+<div id="bangbang"></div>
 </div>
+
+<div id="pytania">
 <br>
 <div id="pyt">
 <b>Pytania</b>
 </div>
 <br><br>
 <table id="tabelka" align="left">
-<script src="skrypt.js"></script>
 <tr>
  <td class="inny_wyglad1"></td>
  <td class="inny_wyglad1">A</td>
@@ -179,13 +170,26 @@
 <div id="wynik2"></div>
 </div>
 </div>
+
+<?php
+
+include("kodzik.php");
+
+?>
+
+<div id="pytka"><p>Treść Pytania:<br></p><?php echo $Pyt ?></div><br>
+<div class="Odp" id="OdpA" onclick="sprawdz(OdpA)"><h1>A)<?php echo $OdpA ?></h1></div><br>
+<div class="Odp" id="OdpB" onclick="sprawdz(OdpB)"><h1>B)<?php echo $OdpB ?></h1></div><br>
+<div class="Odp" id="OdpC" onclick="sprawdz(OdpC)"><h1>C)<?php echo $OdpC ?></h1></div><br>
+
+<div id="komunikat1" font size="14"><br><center>Brawo, udąło Ci się zdobyć punkt!</center></div>
+<div id="komunikat2" font size="14"><br><center>Błąd, nie otrzymujesz punktu!</center></div>
+
+<div id="pytanka">
+</div>
 <div id="drzewa">
 <br>
-<!-- <div id="mag">
-<b>Drużyna Magów</b>
-</div> ----> 
 <table id="tabla" align="left">
-<script src="skrypt.js"></script>
 <tr>
  <td class="inny_td"></td>
  <td class="inny_td">A</td>
@@ -199,94 +203,93 @@
 </tr>
 <tr>
  <td class="inny_td">1</td>
- <td onClick="zmien(1)"> <img src="Chmurka.png" alt="jedyneczka" id="1"></td>
- <td onClick="zmien(2)"> <img src="Chmurka.png" alt="jedyneczka" id="2"></td>
- <td onClick="zmien(3)" > <img src="Chmurka.png" alt="jedyneczka" id="3"></td>
- <td onClick="zmien(4)" > <img src="Chmurka.png" alt="jedyneczka" id="4"></td>
- <td onClick="zmien(5)" > <img src="Chmurka.png" alt="jedyneczka" id="5"></td>
- <td onClick="zmien(6)" > <img src="Chmurka.png" alt="jedyneczka" id="6"></td>
- <td onClick="zmien(7)" > <img src="Chmurka.png" alt="jedyneczka" id="7"></td>
- <td onClick="zmien(8)" > <img src="Chmurka.png" alt="jedyneczka" id="8"></td>
+ <td onClick="zmien(1)"> <img src="chmurka2.png" alt="jedyneczka" id="1"></td>
+ <td onClick="zmien(2)"> <img src="chmurka2.png" alt="jedyneczka" id="2"></td>
+ <td onClick="zmien(3)" > <img src="chmurka2.png" alt="jedyneczka" id="3"></td>
+ <td onClick="zmien(4)" > <img src="chmurka2.png" alt="jedyneczka" id="4"></td>
+ <td onClick="zmien(5)" > <img src="chmurka2.png" alt="jedyneczka" id="5"></td>
+ <td onClick="zmien(6)" > <img src="chmurka2.png" alt="jedyneczka" id="6"></td>
+ <td onClick="zmien(7)" > <img src="chmurka2.png" alt="jedyneczka" id="7"></td>
+ <td onClick="zmien(8)" > <img src="chmurka2.png" alt="jedyneczka" id="8"></td>
 </tr>
 <tr>
  <td class="inny_td">2</td>
- <td onClick="zmien(9)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="9"></td>
- <td onClick="zmien(10)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="10"></td>
- <td onClick="zmien(11)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="11"></td>
- <td onClick="zmien(12)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="12"></td>
- <td onClick="zmien(13)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="13"></td>
- <td onClick="zmien(14)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="14"></td>
- <td onClick="zmien(15)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="15"></td>
- <td onClick="zmien(16)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="16"></td>
+ <td onClick="zmien(9)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="9"></td>
+ <td onClick="zmien(10)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="10"></td>
+ <td onClick="zmien(11)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="11"></td>
+ <td onClick="zmien(12)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="12"></td>
+ <td onClick="zmien(13)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="13"></td>
+ <td onClick="zmien(14)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="14"></td>
+ <td onClick="zmien(15)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="15"></td>
+ <td onClick="zmien(16)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="16"></td>
 </tr>
 <tr>
  <td class="inny_td">3</td>
- <td onClick="zmien(17)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="17"></td>
- <td onClick="zmien(18)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="18"></td>
- <td onClick="zmien(19)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="19"></td>
- <td onClick="zmien(20)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="20"></td>
- <td onClick="zmien(21)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="21"></td>
- <td onClick="zmien(22)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="22"></td>
- <td onClick="zmien(23)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="23"></td>
- <td onClick="zmien(24)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="24"></td>
+ <td onClick="zmien(17)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="17"></td>
+ <td onClick="zmien(18)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="18"></td>
+ <td onClick="zmien(19)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="19"></td>
+ <td onClick="zmien(20)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="20"></td>
+ <td onClick="zmien(21)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="21"></td>
+ <td onClick="zmien(22)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="22"></td>
+ <td onClick="zmien(23)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="23"></td>
+ <td onClick="zmien(24)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="24"></td>
 </tr>
 <tr>
  <td class="inny_td">4</td>
- <td onClick="zmien(25)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="25"></td>
- <td onClick="zmien(26)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="26"></td>
- <td onClick="zmien(27)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="27"></td>
- <td onClick="zmien(28)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="28"></td>
- <td onClick="zmien(29)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="29"></td>
- <td onClick="zmien(30)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="30"></td>
- <td onClick="zmien(31)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="31"></td>
- <td onClick="zmien(32)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="32"></td>
+ <td onClick="zmien(25)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="25"></td>
+ <td onClick="zmien(26)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="26"></td>
+ <td onClick="zmien(27)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="27"></td>
+ <td onClick="zmien(28)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="28"></td>
+ <td onClick="zmien(29)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="29"></td>
+ <td onClick="zmien(30)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="30"></td>
+ <td onClick="zmien(31)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="31"></td>
+ <td onClick="zmien(32)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="32"></td>
 </tr>
 <tr>
  <td class="inny_td">5</td>
- <td onClick="zmien(33)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="33"></td>
- <td onClick="zmien(34)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="34"></td>
- <td onClick="zmien(35)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="35"></td>
- <td onClick="zmien(36)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="36"></td>
- <td onClick="zmien(37)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="37"></td>
- <td onClick="zmien(38)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="38"></td>
- <td onClick="zmien(39)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="39"></td>
- <td onClick="zmien(40)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="40"></td>
+ <td onClick="zmien(33)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="33"></td>
+ <td onClick="zmien(34)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="34"></td>
+ <td onClick="zmien(35)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="35"></td>
+ <td onClick="zmien(36)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="36"></td>
+ <td onClick="zmien(37)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="37"></td>
+ <td onClick="zmien(38)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="38"></td>
+ <td onClick="zmien(39)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="39"></td>
+ <td onClick="zmien(40)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="40"></td>
 </tr>
 <tr>
  <td class="inny_td">6</td>
- <td onClick="zmien(41)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="41"></td>
- <td onClick="zmien(42)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="42"></td>
- <td onClick="zmien(43)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="43"></td>
- <td onClick="zmien(44)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="44"></td>
- <td onClick="zmien(45)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="45"></td>
- <td onClick="zmien(46)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="46"></td>
- <td onClick="zmien(47)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="47"></td>
- <td onClick="zmien(48)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="48"></td>
+ <td onClick="zmien(41)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="41"></td>
+ <td onClick="zmien(42)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="42"></td>
+ <td onClick="zmien(43)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="43"></td>
+ <td onClick="zmien(44)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="44"></td>
+ <td onClick="zmien(45)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="45"></td>
+ <td onClick="zmien(46)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="46"></td>
+ <td onClick="zmien(47)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="47"></td>
+ <td onClick="zmien(48)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="48"></td>
 </tr>
 <tr>
  <td class="inny_td">7</td>
- <td onClick="zmien(49)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="49"></td>
- <td onClick="zmien(50)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="50"></td>
- <td onClick="zmien(51)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="51"></td>
- <td onClick="zmien(52)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="52"></td>
- <td onClick="zmien(53)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="53"></td>
- <td onClick="zmien(54)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="54"></td>
- <td onClick="zmien(55)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="55"></td>
- <td onClick="zmien(56)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="56"></td>
+ <td onClick="zmien(49)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="49"></td>
+ <td onClick="zmien(50)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="50"></td>
+ <td onClick="zmien(51)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="51"></td>
+ <td onClick="zmien(52)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="52"></td>
+ <td onClick="zmien(53)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="53"></td>
+ <td onClick="zmien(54)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="54"></td>
+ <td onClick="zmien(55)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="55"></td>
+ <td onClick="zmien(56)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="56"></td>
 </tr>
 <tr>
  <td class="inny_td">8</td>
- <td onClick="zmien(57)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="57"></td>
- <td onClick="zmien(58)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="58"></td>
- <td onClick="zmien(59)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="59"></td>
- <td onClick="zmien(60)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="60"></td>
- <td onClick="zmien(61)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="61"></td>
- <td onClick="zmien(62)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="62"></td>
- <td onClick="zmien(63)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="63"></td>
- <td onClick="zmien(64)" > <img src="Chmurka.png" alt="kolko lub krzyzyk" id="64"></td>
+ <td onClick="zmien(57)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="57"></td>
+ <td onClick="zmien(58)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="58"></td>
+ <td onClick="zmien(59)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="59"></td>
+ <td onClick="zmien(60)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="60"></td>
+ <td onClick="zmien(61)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="61"></td>
+ <td onClick="zmien(62)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="62"></td>
+ <td onClick="zmien(63)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="63"></td>
+ <td onClick="zmien(64)" > <img src="chmurka2.png" alt="kolko lub krzyzyk" id="64"></td>
 </tr>
 </table>
-</div>
 </div>
 </div>
 </div>

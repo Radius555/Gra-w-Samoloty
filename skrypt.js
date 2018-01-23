@@ -21,15 +21,24 @@ function losuj()
 		{
 		document.getElementById( 'drzewa').style.display='block';
 		};
-		
 		function odblokuj_pytanka() 
 		{
-		document.getElementById( 'pytanka').style.display='block';
+		setTimeout(function(){document.getElementById('pytanka').setAttribute("style", "animation-play-state:running; display: block;");},550);
+		setTimeout(function(){document.getElementById('pytanka').setAttribute("style", "position: absolute; display: block;");},1500);
+		setTimeout(function(){document.getElementById('pytka').setAttribute("style", "animation-play-state:running; display: block;");},1500);
+		setTimeout(function(){document.getElementById('pytka').setAttribute("style", "animation-play-state:running; display: block; margin-top: 90px; margin-left: 190px;");},3000);
+		setTimeout(function(){document.getElementById('OdpA').setAttribute("style", "animation-play-state:running; display: block;");},3000);
+		setTimeout(function(){document.getElementById('OdpA').setAttribute("style", "animation-play-state:running; display: block; margin-top: 30px; margin-left: 190px;");},3500);
+		setTimeout(function(){document.getElementById('OdpB').setAttribute("style", "animation-play-state:running; display: block;");},3200);
+		setTimeout(function(){document.getElementById('OdpB').setAttribute("style", "animation-play-state:running; display: block; margin-top: 15px; margin-left: 190px;");},3700);
+		setTimeout(function(){document.getElementById('OdpC').setAttribute("style", "animation-play-state:running; display: block;");},3400);
+		setTimeout(function(){document.getElementById('OdpC').setAttribute("style", "animation-play-state:running; display: block; margin-top: 15px; margin-left: 190px;");},3900);
 		};
 		
 		function znik_pyt() 
 		{
-		document.getElementById( 'pytania' ).style.display='none';
+		setTimeout(function(){document.getElementById( 'pytania' ).style.animation='pytania_anim 0.5s';},);
+		setTimeout(function(){document.getElementById( 'pytania' ).style.display='none';},450);
 		};
 		
 		function znik_drz() 
@@ -49,7 +58,16 @@ function losuj()
 		
 		function znik_pytanka() 
 		{
-		document.getElementById( 'pytanka').style.display='none';
+		setTimeout(function(){document.getElementById( 'pytanka' ).style.animation='pytanka_znik_anim 0.5s';},);
+		setTimeout(function(){document.getElementById( 'pytanka' ).style.display='none';},450);
+		setTimeout(function(){document.getElementById( 'pytka' ).style.animation='pytanka_znik_anim 0.5s';},);
+		setTimeout(function(){document.getElementById( 'pytka' ).style.display='none';},450);
+		setTimeout(function(){document.getElementById( 'OdpA' ).style.animation='pytanka_znik_anim 0.5s';},);
+		setTimeout(function(){document.getElementById( 'OdpA' ).style.display='none';},450);
+		setTimeout(function(){document.getElementById( 'OdpB' ).style.animation='pytanka_znik_anim 0.5s';},);
+		setTimeout(function(){document.getElementById( 'OdpB' ).style.display='none';},450);
+		setTimeout(function(){document.getElementById( 'OdpC' ).style.animation='pytanka_znik_anim 0.5s';},);
+		setTimeout(function(){document.getElementById( 'OdpC' ).style.display='none';},450);
 		};
 		function znik_animacja()
 		{
@@ -62,20 +80,14 @@ function losuj()
 		document.getElementById('kula').style.display="none";
 		}
 	
-	function pytanka()
-	{
-	document.getElementById('pytanka').style.transform="translateX(592px)";
-	};
-
 	function odp1 (pozycja)
 	{
 		if (pozycja) 
 		{
 			document.getElementById(pozycja).src = 'juz.jpg';
 			document.getElementById(pozycja).disabled='disabled';
-			blokuj_pyt();
+			znik_pyt();
 			odblokuj_pytanka();
-			pytanka();
 		}	
 		else
 		{
@@ -90,9 +102,8 @@ function losuj()
 		{
 			document.getElementById(pozycja).src = 'juz.jpg';
 			document.getElementById(pozycja).disabled='disabled';
-			blokuj_pyt();
+			znik_pyt();
 			odblokuj_pytanka();
-			pytanka();
 		}	 
 		else
 		{
@@ -107,9 +118,8 @@ function losuj()
 		{
 			document.getElementById(pozycja).src = 'juz.jpg';
 			document.getElementById(pozycja).disabled='disabled';
-			blokuj_pyt();
+			znik_pyt();
 			odblokuj_pytanka();
-			pytanka();
 		}
 		else
 		{
@@ -124,9 +134,8 @@ function losuj()
 		{
 			document.getElementById(pozycja).src = 'juz.jpg';
 			document.getElementById(pozycja).disabled='disabled';
-			blokuj_pyt();
+			znik_pyt();
 			odblokuj_pytanka();
-			pytanka();
 			zlicz_pts();
 		}
 		else
@@ -136,24 +145,27 @@ function losuj()
 			setTimeout(odblokuj_drz(),0);
 		}		
 	};
-
 function sprawdz(pozycja)
 {
 	var poprawna = OdpA;
 	
 	if(pozycja == poprawna) 
 	{
-    alert('Dobra odpowiedź otrzymujesz punkt!');
-	znik_pytanka();
-	odblokuj_drz();
+	setTimeout(function(){document.getElementById('komunikat1').setAttribute("style", "animation-play-state:running; display: block;");},500);
+	setTimeout(function(){document.getElementById('komunikat1').setAttribute("style", "animation-play-state:running; display: block; margin-top: 15px; margin-left: 190px;");},500);
+	setTimeout(function(){document.getElementById( 'komunikat1' ).style.display='none';},3000);
+	setTimeout(znik_pytanka, 3000);
+	setTimeout(odblokuj_drz, 3500);
 	punkty = punkty + 1;
 	document.getElementById("wynik1").innerHTML=punkty;
 	}
-
-    else
+    else 
 	{
-    alert('Kliknąłeś źle');
-	znik_pytanka();
+	setTimeout(function(){document.getElementById('komunikat2').setAttribute("style", "animation-play-state:running; display: block;");},500);
+	setTimeout(function(){document.getElementById('komunikat2').setAttribute("style", "position: absolute; display: block;");},500);
+	setTimeout(function(){document.getElementById( 'komunikat2' ).style.display='none';},3000);
+	setTimeout(znik_pytanka, 3000);
+	setTimeout(odblokuj_pyt, 3500);
 	}
 };
 
@@ -167,7 +179,6 @@ function zmien(pozycja)
 		gnome++;
 		if(gnome<=20)
 		{
-		document.getElementById(pozycja).disabled='disabled';
 		punkty = punkty + 1;
 		document.getElementById("wynik1").innerHTML=punkty;
 		znik_pyt();
@@ -179,8 +190,11 @@ function zmien(pozycja)
 		document.getElementById('boom').setAttribute("style", "animation-play-state:running; display: block;");
 		document.getElementById('bangbang').setAttribute("style", "animation-play-state:running; display: block;");
 		document.getElementById('kula').setAttribute("style", "animation-play-state:running; display: block;");
+		document.getElementById(pozycja).disabled='disabled';
 		setTimeout(znik_animacja, 4500); 
 		setTimeout(odblokuj_pyt, 4500); 
+		setTimeout(function(){document.getElementById('boom').style = "display: none"}, 2500);
+		setTimeout(function(){document.getElementById(pozycja).src = 'ogień.gif'}, 4500);
 		}
 		else
 		{
