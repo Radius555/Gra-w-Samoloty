@@ -1,209 +1,303 @@
-#calosc
+#gra1niemiec
 {
-		width: 1450px;
-		height: 1000px;
-		background-color: green;
+	width: 1073px;
+	height: 700px;
+	background-color: #ccff66;
+	float: left;
+	display: none;
+	z-index: 2;
 }
-#gora
-{
-		width: 1450px;
-		height: 200px;
-		background-color: #3399ff;
-}
-#menu
-{
-		width: 12%;
-		height: 700px;
-		background-color: blue;
-		float: left;
-}
-#gra1
-{
-		width: 74%;
-		height: 700px;
-		background-color: #ccff66;
-		float: left;		
-	
-}
-#gra1madzy
+#kwadracik
 {
 	width: 100%;
-	height: 685px;
-	background-color: #9BC0EA;
+	height: 700px;
+	background-color: rgb(155,192,234);
+	transition: all 1s ease-out;
 	float: left;
-}
-@keyframes lot_samolot1
-{
-  0% { transform:translateX(0px) scale(1); }
-  100% { transform:translateX(1090px) scale(1); }
-}
-@keyframes lot_samolot2
-{
-  0% { transform:translateX(120px) translateY(-70px) scale(1); }
-  45% { transform:translateX(580px) translateY(-60px) scale(1); }
-  48% { transform:translateX(585px) translateY(-40px) scale(1) rotate(10deg); }
-  50% { transform:translateX(590px) translateY(-20px) scale(1) rotate(20deg); }
-  52% { transform:translateX(595px) translateY(0px) scale(1) rotate(30deg); }
-  54% { transform:translateX(600px) translateY(20px) scale(1) rotate(40deg); }
-  56% { transform:translateX(605px) translateY(40px) scale(1) rotate(50deg); }
-  100% { transform:translateX(950px) translateY(600px) scale(1) rotate(90deg); }
-}
-@keyframes lot_kula
-{
-  0% { transform: scale(0); }
-  45% { transform: scale(0); }
-  48% { transform: scale(1) ;}
-  50% { transform: scale(1) ; }
-  52% { transform: scale(1) ; }
-  54% { transform: scale(1) ; }
-  56% { transform: scale(1) ;}
-  100% { transform: scale(1) ; }
-}
-@keyframes lot_bombka
-{
-  0%  { transform:translateX(70px) translateY(-100px) scale(1); }
-  50%  { transform:translateX(605px) translateY(-100px) scale(1); }
-  51%  { transform:scale(0); }
-  100% { transform:scale(0); }
-}
-@keyframes boom_boom
-{
-  0% { transform: scale(0); }
-  52% { transform: scale(0); }
-  55% { transform: scale(1); }
-  60% { transform: scale(1.5); }
-  65% { transform: scale(1); }
-  70% { transform: scale(1.5); }
-  75% { transform: scale(1); }
-  80% { transform: scale(1.5); }
-  85% { transform: scale(1); }
-  90% { transform: scale(1.5); }
-  95% { transform: scale(1); }
-  96% { transform: scale(0); }
-  100% { transform: scale(0); }
-}
-@keyframes bangbang
-{
-  0% { transform: scale(0); }
-  67% { transform: scale(0); }
-  70% { transform: scale(1); }
-  73% { transform: scale(1.5); }
-  76% { transform: scale(1); }
-  79% { transform: scale(1.5); }
-  82% { transform: scale(1); }
-  85% { transform: scale(1.5); }
-  88% { transform: scale(1); }
-  91% { transform: scale(1.5); }
-  94% { transform: scale(1); }
-  97% { transform: scale(0); }
-  100% { transform: scale(0); }
-}
-#samolot1
-{
-	width:105px;
-	height:75px;
-	background-image:url('anglik.png');
-	animation-delay: 1s;
-	animation: lot_samolot1 5s;
-	z-index: 0;
-	position: relative;
-}
-
-#samolot2
-{
-	width:105px;
-	height:75px;
-	 background-image:url('niemiec.png');
-	animation-delay: 0s;
-	animation: lot_samolot2 5s;
-	z-index: 1;
-	position: relative;
-}
-
-#pocisk
-{
-	width:18px;
-	height:5px;
-	background-image:url('bombka.png');
-	animation-delay: 1s;
-	animation: lot_bombka 5s;
-	z-index: 2;
-	position: relative;
-}
-#boom
-{
-	width:133px;
-	height:100px;
-	background-image:url('boom.png');
-	animation-delay: 1s;
-	animation: boom_boom 2.2s;
-	z-index: 3;
-	position: relative;
-	margin-left: 530px;
-	margin-top: -160px;
-}
-#bangbang
-{
-	width:133px;
-	height:100px;
-	background-image:url('Bangbang.png');
-	animation-delay: 4s;
-	animation: bangbang 6s;
-	z-index: 3;
-	position: relative;
-	margin-left: 830px;
-	margin-top: 400px;	
-}
-#kula
-{
-	width:70px;
-	height:50px;
-	 background-image:url('kula.png');
-	animation-delay: 0s;
-	animation: lot_kula 5s;
-	z-index: 2;
-	position: relative;	
-}
-#licznik
-{
-	width:100%;
-	height:15px;
-	background: aqua;
-	float: left;
-}
-#info
-{
-	height: 10px;
-	width: 10px;
-	float: left;
-	font-family: Russo One;
-	color: gold;
 	display: none;
 }
-#prawy1
+#pytanka1
 {
-		width: 14%;
-		height: 700px;
-		background-color: #63ff94;
-		float: left;
-		z-index: 2;
-		position: relative;
+	font-size: 15px;
+	background-color: #66ffff;
+	height: 600px;
+	width: 850px;
+	float: left;
+	margin-left: 100px;
+	margin-top: -20px;
+	display: none;
+	animation-delay: 0s;
+	z-index: 2;
+	position: relative;
+	animation-play-state: paused;
+	animation: pytanka_anim 0.3s;
+	animation-direction:reverse;
 }
-#dol
+#pytka1
 {
-		width: 1450px;
-		height: 100px;
-		background-color: #3399ff;
-		float:left;
-		z-index: 3;
-		position: relative;
+	position: relative;
+	font-size: 15px;
+	background-color: white;
+	height: 170px;
+	width: 60%;
+	float: left;
+	z-index: 4;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	animation: anim_pytka 1.5s;
+	display: none;
+	margin-top: 60px;
+	margin-left: 90px;
+}
+#OdpA1
+{
+	position: relative;
+	font-size: 15px;
+	background-color: #66ff33;
+	height: 70px;
+	width: 60%;
+	float: left;
+	z-index: 4;
+	animation: anim_OdpA 0.5s;
+	display: none;
+	margin-top: 30px;
+	margin-left: 190px;
+}
+#OdpB1
+{
+	position: relative;
+	font-size: 15px;
+	background-color: #66ff33;
+	height: 70px;
+	width: 60%;
+	float: left;
+	z-index: 4;
+	animation: anim_OdpB 0.5s;
+	display: none;
+	margin-top: 15px;
+	margin-left: 190px;
+}
+#OdpC1
+{
+	position: relative;
+	font-size: 15px;
+	background-color: #66ff33;
+	height: 70px;
+	width: 60%;
+	float: left;
+	z-index: 4;
+	animation: anim_OdpC 0.5s;
+	display: none;
+	margin-top: 15px;
+	margin-left: 190px;
+}
+#komunikat1a
+{
+	position: relative;
+	font-size: 15px;
+	background-color: #ffff33;
+	height: 70px;
+	width: 60%;
+	float: left;
+	z-index: 4;
+	animation: anim_komunikat1 2.8s;
+	display: none;
+	margin-top: 20px;
+	margin-left: 190px;
+}
+#komunikat2a
+{
+	position: relative;
+	font-size: 15px;
+	background-color: #ffff33;
+	height: 70px;
+	width: 60%;
+	float: left;
+	z-index: 4;
+	animation: anim_komunikat2 2.8s;
+	display: none;
+	margin-top: 20px;
+	margin-left: 190px;
+}
+#drzewa1
+{
+		width: 50%;
+		height: 700px;
+		background-color: 00ccaa;
+		float: left;
+		display: none;
+		margin-left: 250px; 
+}
+#czarni1
+{
+		width: 175px;
+		height: 30px;
+		background-color: #FFD966;
+		float: left;
+		margin-left: 100px;
+		margin-right: 150px;
+		font-size: 15px;
+		text-align: center;
+		font-family: calibri;
 	
 }
-#spotka
+#tabla1
 {
-		width: 1450px;
-		height: 50px;
-		background-color: #3399ff;
-		z-index: 3;
-		position: relative;
+	float: left;
+	border: 0px;
+	border-collapse: collapse;
+}
+#tabla1 td.inny_td
+{ 
+		height: 61px;
+		width: 80px;
+		text-align: center;
+		border: none;
+		line-height: 0px;
+		background-image: url("niebo.png");
+}
+#tabla1 td 
+{ 
+		height: 61px;
+		width: 80px;
+		text-align: center;
+		border: none;
+		line-height: 0px; 
+		background-image: url("niebo.png");
+}
+@keyframes pytania_anim
+{
+  0% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+#pytania1
+{
+		width: 64%;
+		height: 700px;
+		background-color: 00ccaa;
+		float: left;
+		margin-left: 20%;
+		display: none;
+}
+#pyt1
+{
+		width: 130px;
+		height: 30px;
+		background-color: #FFD966;
+		float: left;
+		margin-left: 100px;
+		margin-right: 150px;
+		font-size: 15px;
+		text-align: center;
+		font-family: calibri;
+}
+
+#tabelka1
+{
+		float: left;
+		border: 0px;
+		border-collapse: collapse;
+	
+}
+#tabelka1 td
+{
+		height: 42px;
+		width: 30px;
+		text-align: center;
+		border-width: 1px;  
+		margin-top: 0px;
+		border-bottom: 0px;
+		border-right: 0px;
+		margin-bottom: 0px;
+		border-style: solid;
+		float: left;
+		background-color: #F2F2F2;
+}
+#tabelka1 td.inny_wyglad1
+{
+		height: 40px;
+		width: 30px;
+		text-align: center;
+		background-color: 00ccaa;
+		border: none;
+}
+#tabelka1 td.inny_wyglad2
+{
+		height: 40px;
+		width: 30px;
+		text-align: center;
+		background-color: 00ccaa;
+		border: none;
+}
+#tabelka2a
+{
+		float:left;
+		border:0px;
+		border-collapse: collapse;
+}
+
+#tabelka2a th
+{
+		height: 39px;
+		width: 120px;
+		text-align: center;
+		border-width: 1px;  
+		border-bottom: 1px;
+		border-style: solid;
+		float: left;
+		background-color: #e0adf5;
+}
+#tabelka2a td
+{
+		height: 87px;
+		width: 120px;
+		text-align: center;
+		border-width: 1px; 
+		border-top: 0px;
+		border-style: solid;
+		float: left;	
+		background-color: #F2F2F2;
+}
+#tabelka3a
+{
+		float: left;
+		border: 0px;
+		border-collapse: collapse;
+}
+
+#tabelka3a th
+{
+		height: 38px;
+		width: 159px;
+		text-align: center;
+		border-width: 1px;  
+		border-style: solid;
+		float: left;
+		background-color: #e0adf5;
+		border-left: 0px;
+}
+#tabelka3a td
+{
+		height: 42px;
+		width: 120px;
+		text-align: center;
+		border-width: 1px;  
+		border-style: solid;
+		border-bottom: 1px;
+		float: left;	
+		background-color: #F2F2F2;
+		border-left: 0px;
+}
+#tabelka3a td.inny_wyglad 
+{
+		height: 41px;
+		width: 36px;
+		text-align: center;
+		border-width: 1px;  
+		border-style: solid;
+		border-left: 0px;
+		float: left;	
+		background-color: #F7D1E1;
 }

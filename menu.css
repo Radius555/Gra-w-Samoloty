@@ -16,22 +16,27 @@
 		height: 700px;
 		background-color: blue;
 		float: left;
-		z-index: 2;
+		z-index: 3;
 		position: relative;
 }
-@keyframes ruch
+@keyframes anim_gra1
 {
-  0% { background-position:0 0, 0 0, 0 0; }
-  100% { background-position:10000px 0, 7500px 0, 5000px 0; }
+    0%   {background-image: url('tlo.jpg');}
+    25%  {background-image: url('tlo1.jpg');}
+    50%  {background-image: url('tlo2.jpg');}
+    75%  {background-image: url('tlo1.jpg');}
+	100% {background-image: url('tlo.jpg');}
 }
 #gra1
 {
 		width: 74%;
 		height: 700px;
-		background-color: #ccff66;
-		float: left;	
-		background-image: url('tlo.jpg'), url('tlo1.jpg'), url('tlo2.jpg');
-		animation:ruch 300s;
+		background-image: #ccff66;
+		float: left;
+		z-index: 1;
+	    animation-name: anim_gra1;
+        animation-iteration-count: 2000;
+        animation-duration: 12s;
 }
 #powrot
 {
@@ -48,15 +53,7 @@
 	float: left;
 	margin-left: 300px;
 	margin-top: 50px;
-}
-#menus1
-{
-	width: 600px;
-	height: 600px;
-	background-color: #0045A1;
-	float: left;
-	margin-left: 200px;
-	margin-top: 50px;
+	z-index: 3;
 }
 #nowagra
 {
@@ -66,6 +63,7 @@
 	float: left;
 	margin-left: 20px;
 	margin-top: 20px;
+	z-index: 3;
 }
 
 #tworca
@@ -76,6 +74,7 @@
 	float: left;
 	margin-left: 20px;
 	margin-top: 20px;
+	z-index: 3;
 }
 #info
 {
@@ -85,6 +84,7 @@
 	float: left;
 	margin-left: 20px;
 	margin-top: 20px;
+	z-index: 3;
 }
 #prawy1
 {
@@ -92,7 +92,7 @@
 		height: 700px;
 		background-color: #63ff94;
 		float: left;
-		z-index: 2;
+		z-index: 3;
 		position: relative;
 }
 #dol
@@ -101,7 +101,7 @@
 		height: 100px;
 		background-color: #3399ff;
 		float:right;
-		z-index: 2;
+		z-index: 3;
 		position: relative;
 }
 #spotka
@@ -109,6 +109,6 @@
 		width: 1450px;
 		height: 50px;
 		background-color: #3399ff;
-		z-index: 2;
+		z-index: 3;
 		position: relative;
 }
